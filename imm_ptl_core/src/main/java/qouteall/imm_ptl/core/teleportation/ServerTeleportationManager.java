@@ -1,6 +1,5 @@
 package qouteall.imm_ptl.core.teleportation;
 
-import com.fusionflux.gravity_api.api.GravityChangerAPI;
 import net.minecraft.Util;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.players.PlayerList;

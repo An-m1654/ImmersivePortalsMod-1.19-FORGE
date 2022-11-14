@@ -1,7 +1,5 @@
 package qouteall.imm_ptl.core.portal;
 
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.Util;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
@@ -61,8 +59,7 @@ public class LoadingIndicatorEntity extends Entity {
             }
         }
     }
-    
-    @Environment(EnvType.CLIENT)
+
     private void tickClient() {
         addParticles();
         
@@ -70,8 +67,7 @@ public class LoadingIndicatorEntity extends Entity {
             showMessageClient();
         }
     }
-    
-    @Environment(EnvType.CLIENT)
+
     private void addParticles() {
         int num = tickCount < 100 ? 50 : 20;
         
@@ -135,8 +131,7 @@ public class LoadingIndicatorEntity extends Entity {
     public Component getText() {
         return getEntityData().get(text);
     }
-    
-    @Environment(EnvType.CLIENT)
+
     private void showMessageClient() {
         Gui inGameHud = Minecraft.getInstance().gui;
         inGameHud.setOverlayMessage(

@@ -1,8 +1,6 @@
 package qouteall.imm_ptl.core.render;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -11,7 +9,6 @@ import qouteall.imm_ptl.core.IPCGlobal;
 import qouteall.imm_ptl.core.portal.Portal;
 import qouteall.imm_ptl.core.render.context_management.PortalRendering;
 
-@Environment(EnvType.CLIENT)
 public class PortalEntityRenderer extends EntityRenderer<Portal> {
     
     public PortalEntityRenderer(EntityRendererProvider.Context context) {

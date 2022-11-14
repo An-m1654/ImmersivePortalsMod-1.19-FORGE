@@ -1,7 +1,5 @@
 package qouteall.imm_ptl.core.miscellaneous;
 
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
 import qouteall.imm_ptl.core.IPGlobal;
@@ -11,7 +9,6 @@ import qouteall.q_misc_util.api.McRemoteProcedureCall;
 
 import java.util.ArrayDeque;
 
-@Environment(EnvType.CLIENT)
 public class ClientPerformanceMonitor {
     
     public static PerformanceLevel level = PerformanceLevel.medium;

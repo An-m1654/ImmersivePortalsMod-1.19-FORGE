@@ -1,7 +1,5 @@
 package qouteall.imm_ptl.core.portal;
 
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.BlockGetter;
@@ -137,8 +135,7 @@ public class PortalPlaceholderBlock extends Block {
     public RenderShape getRenderShape(BlockState blockState_1) {
         return RenderShape.INVISIBLE;
     }
-    
-    @Environment(EnvType.CLIENT)
+
     @Override
     public float getShadeBrightness(
         BlockState blockState_1,

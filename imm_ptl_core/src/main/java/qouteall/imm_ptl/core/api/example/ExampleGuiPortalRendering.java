@@ -4,8 +4,6 @@ import com.mojang.blaze3d.pipeline.RenderTarget;
 import com.mojang.blaze3d.pipeline.TextureTarget;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Matrix4f;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
@@ -57,7 +55,6 @@ public class ExampleGuiPortalRendering {
     /**
      * The Framebuffer that the GUI portal is going to render onto
      */
-    @Environment(EnvType.CLIENT)
     private static RenderTarget frameBuffer;
     
     /**
@@ -100,7 +97,6 @@ public class ExampleGuiPortalRendering {
     }
     
     public static class RemoteCallables {
-        @Environment(EnvType.CLIENT)
         public static void clientActivateExampleGuiPortal(
             ResourceKey<Level> dimension,
             Vec3 position
@@ -116,8 +112,7 @@ public class ExampleGuiPortalRendering {
             removeChunkLoaderFor(player);
         }
     }
-    
-    @Environment(EnvType.CLIENT)
+
     public static class GuiPortalScreen extends Screen {
         
         private final ResourceKey<Level> viewingDimension;

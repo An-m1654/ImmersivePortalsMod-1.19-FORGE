@@ -1,7 +1,5 @@
 package qouteall.imm_ptl.core.render.context_management;
 
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.phys.Vec3;
@@ -21,7 +19,6 @@ import java.util.Stack;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-@Environment(EnvType.CLIENT)
 public class PortalRendering {
     private static final Stack<PortalLike> portalLayers = new Stack<>();
     private static boolean isRenderingCache = false;

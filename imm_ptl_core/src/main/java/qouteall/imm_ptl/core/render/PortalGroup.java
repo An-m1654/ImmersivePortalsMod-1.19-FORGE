@@ -2,9 +2,6 @@ package qouteall.imm_ptl.core.render;
 
 import com.mojang.math.Matrix4f;
 import com.mojang.math.Quaternion;
-import it.unimi.dsi.fastutil.objects.ObjectList;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.Mth;
 import net.minecraft.world.level.Level;
@@ -27,7 +24,6 @@ import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
 // currently only exists on client side
-@Environment(EnvType.CLIENT)
 public class PortalGroup implements PortalLike {
     
     private static final LimitedLogger limitedLogger = new LimitedLogger(20);
@@ -215,8 +211,7 @@ public class PortalGroup implements PortalLike {
     public Vec3[] getOuterFrustumCullingVertices() {
         return null;
     }
-    
-    @Environment(EnvType.CLIENT)
+
     @Override
     public void renderViewAreaMesh(Vec3 portalPosRelativeToCamera, Consumer<Vec3> vertexOutput) {
         for (Portal portal : portals) {
@@ -256,8 +251,7 @@ public class PortalGroup implements PortalLike {
         
         return portals.stream().filter(p -> p.cannotRenderInMe(portal)).count() >= 2;
     }
-    
-    @Environment(EnvType.CLIENT)
+
     @Override
     public BoxPredicate getInnerFrustumCullingFunc(
         double innerCameraX, double innerCameraY, double innerCameraZ

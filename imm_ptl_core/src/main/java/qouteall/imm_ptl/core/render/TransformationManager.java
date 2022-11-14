@@ -4,8 +4,6 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Matrix4f;
 import com.mojang.math.Quaternion;
 import com.mojang.math.Vector3f;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.client.Camera;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
@@ -20,7 +18,6 @@ import qouteall.imm_ptl.core.render.context_management.WorldRenderInfo;
 import qouteall.q_misc_util.Helper;
 import qouteall.q_misc_util.my_util.DQuaternion;
 
-@Environment(EnvType.CLIENT)
 public class TransformationManager {
     
     private static DQuaternion interpolationStart;
@@ -247,8 +244,7 @@ public class TransformationManager {
     }
     
     public static boolean isCalculatingViewBobbingOffset = false;
-    
-    @Environment(EnvType.CLIENT)
+
     public static class RemoteCallables {
         public static void enableIsometricView(float viewLength) {
             isometricViewLength = viewLength;

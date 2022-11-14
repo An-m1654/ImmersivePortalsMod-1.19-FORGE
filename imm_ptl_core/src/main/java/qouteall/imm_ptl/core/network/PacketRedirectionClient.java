@@ -1,7 +1,5 @@
 package qouteall.imm_ptl.core.network;
 
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.multiplayer.ClientPacketListener;
@@ -27,7 +25,6 @@ import qouteall.q_misc_util.my_util.SignalArged;
 
 import java.util.Optional;
 
-@Environment(EnvType.CLIENT)
 public class PacketRedirectionClient {
     
     public static final Minecraft client = Minecraft.getInstance();

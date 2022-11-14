@@ -231,9 +231,7 @@ public class BlockManipulationClient {
         );
     }
     
-    /**
-     * {@link Minecraft#startAttack()}
-     */
+
     public static boolean myAttackBlock() {
         ClientLevel targetWorld =
             ClientWorldLoader.getWorld(remotePointedDim);
@@ -318,13 +316,7 @@ public class BlockManipulationClient {
             )
         );
     }
-    
-    /**
-     * In {@link MultiPlayerGameMode#useItemOn(LocalPlayer, ClientLevel, InteractionHand, BlockHitResult)}
-     * {@link UseOnContext#UseOnContext(Player, InteractionHand, BlockHitResult)}
-     * It will use the player's current dimension which may be wrong when interacting another dimension's block
-     * So also switch the player's dimension
-     */
+
     private static <T> T withWorldSwitchedAndPlayerDimensionSwitched(
         ClientLevel targetWorld,
         Supplier<T> supplier

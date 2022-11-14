@@ -20,12 +20,6 @@ import qouteall.q_misc_util.my_util.LimitedLogger;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * In 1.18 MC has two separate entity tracking systems. This looks weird.
- * One is in {@link net.minecraft.server.world.ServerEntityManager},
- * one is in {@link net.minecraft.server.world.ThreadedAnvilChunkStorage.EntityTracker}
- *  and {@link net.minecraft.server.network.EntityTrackerEntry}
- * */
 public class EntitySync {
     private static final LimitedLogger limitedLogger = new LimitedLogger(100);
     

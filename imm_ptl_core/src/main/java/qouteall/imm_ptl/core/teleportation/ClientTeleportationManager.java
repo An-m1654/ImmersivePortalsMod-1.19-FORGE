@@ -1,7 +1,5 @@
 package qouteall.imm_ptl.core.teleportation;
 
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.player.LocalPlayer;
@@ -41,7 +39,6 @@ import qouteall.q_misc_util.my_util.Vec2d;
 import java.util.Comparator;
 import java.util.stream.Stream;
 
-@Environment(EnvType.CLIENT)
 public class ClientTeleportationManager {
     public static final Minecraft client = Minecraft.getInstance();
     public long tickTimeForTeleportation = 0;

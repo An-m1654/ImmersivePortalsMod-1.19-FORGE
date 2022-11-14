@@ -1,23 +1,16 @@
 package qouteall.imm_ptl.core;
 
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.Util;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.ConfirmLinkScreen;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.multiplayer.PlayerInfo;
-import net.minecraft.core.Registry;
-import net.minecraft.core.RegistryAccess;
-import net.minecraft.network.chat.ChatType;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
-import org.apache.commons.lang3.Validate;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL32;
 import qouteall.imm_ptl.core.ducks.IEClientWorld;
@@ -34,7 +27,6 @@ import java.util.stream.Stream;
 
 import static org.lwjgl.opengl.GL11.GL_NO_ERROR;
 
-@Environment(EnvType.CLIENT)
 public class CHelper {
     
     private static int reportedErrorNum = 0;

@@ -3,8 +3,6 @@ package qouteall.imm_ptl.core.portal;
 import com.mojang.math.Matrix4f;
 import com.mojang.math.Quaternion;
 import com.mojang.math.Vector3f;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.Util;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.BlockPos;
@@ -201,8 +199,7 @@ public class Portal extends Entity implements PortalLike, IPEntityEventListenabl
     
     @Nullable
     public List<String> commandsOnTeleported;
-    
-    @Environment(EnvType.CLIENT)
+
     PortalRenderInfo portalRenderInfo;
     
     public final PortalAnimation animation = new PortalAnimation();
@@ -944,8 +941,7 @@ public class Portal extends Entity implements PortalLike, IPEntityEventListenabl
         }
         return false;
     }
-    
-    @Environment(EnvType.CLIENT)
+
     private boolean isPortalValidClient() {
         boolean contains = ClientWorldLoader.getServerDimensions().contains(dimensionTo);
         if (!contains) {
@@ -1349,7 +1345,6 @@ public class Portal extends Entity implements PortalLike, IPEntityEventListenabl
     
     
     // function return true for culled
-    @Environment(EnvType.CLIENT)
     @Override
     public BoxPredicate getInnerFrustumCullingFunc(
         double cameraX, double cameraY, double cameraZ
@@ -1604,9 +1599,7 @@ public class Portal extends Entity implements PortalLike, IPEntityEventListenabl
         
         setScaleTransformation(state.scaling);
     }
-    
-    
-    @Environment(EnvType.CLIENT)
+
     private void acceptDataSync(Vec3 pos, CompoundTag customData) {
         PortalState oldState = getPortalState();
         

@@ -1,8 +1,6 @@
 package qouteall.imm_ptl.core.portal.nether_portal;
 
 import com.mojang.math.Quaternion;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.Util;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
@@ -187,8 +185,7 @@ public abstract class BreakablePortalEntity extends Portal {
     
     
     protected abstract boolean isPortalIntactOnThisSide();
-    
-    @Environment(EnvType.CLIENT)
+
     protected abstract void addSoundAndParticle();
     
     private static final LimitedLogger limitedLogger = new LimitedLogger(20);

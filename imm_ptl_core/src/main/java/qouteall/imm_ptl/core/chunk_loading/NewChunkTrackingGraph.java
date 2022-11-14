@@ -480,13 +480,7 @@ public class NewChunkTrackingGraph {
         return records.stream().filter(r -> r.isLoadedToPlayer)
             .mapToInt(r -> r.distanceToSource).min().orElse(-1);
     }
-    
-    /**
-     * {@link net.minecraft.server.world.ThreadedAnvilChunkStorage#getPlayersWatchingChunk(ChunkPos, boolean)}
-     * The "onlyOnWatchDistanceEdge" is so weird!!!!!!
-     * If it does not send only to edge players, placing a block will
-     * send light updates and cause client to rebuild the chunk multiple times
-     */
+
     public static Stream<ServerPlayer> getFarWatchers(
         ResourceKey<Level> dimension,
         int x, int z

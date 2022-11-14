@@ -1,7 +1,5 @@
 package qouteall.imm_ptl.core.portal;
 
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.core.BlockPos;
@@ -124,8 +122,7 @@ public class EndPortalEntity extends Portal {
             tickClient();
         }
     }
-    
-    @Environment(EnvType.CLIENT)
+
     private void tickClient() {
         if (Objects.equals(portalTag, "view_box")) {
             LocalPlayer player = Minecraft.getInstance().player;

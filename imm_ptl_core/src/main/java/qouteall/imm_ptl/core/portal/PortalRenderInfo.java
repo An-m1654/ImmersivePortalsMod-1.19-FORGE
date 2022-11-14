@@ -1,7 +1,5 @@
 package qouteall.imm_ptl.core.portal;
 
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.profiling.ProfilerFiller;
 import org.apache.commons.lang3.Validate;
@@ -24,7 +22,6 @@ import java.util.UUID;
 
 // A portal's rendering related things
 // to access the package private field of Portal, this class is not in "render" package
-@Environment(EnvType.CLIENT)
 public class PortalRenderInfo {
     
     public static class Visibility {
