@@ -66,7 +66,7 @@ allprojects {
         //api fg.deobf("teamtwilight:twilightforest:${project.twilightforest_version}:universal")
         api fg.deobf("curse.maven:twilightforest-227639:${project.twilightforest_fileid}")
         // Flywheel
-        api fg.deobf("com.jozufozu.flywheel:flywheel-forge-1.19.2:${project.flywheel_version}")
+//        api fg.deobf("com.jozufozu.flywheel:flywheel-forge-1.19.2:${project.flywheel_version}") THIS IS IMPLEMENTED INTO CREATE NOW
         // Rubidium
         api fg.deobf("curse.maven:rubidium-574856:${project.rubidium_fileid}")
         // Oculus
@@ -75,10 +75,10 @@ allprojects {
         runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:${project.curios_version}")
         compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:${project.curios_version}:api")
         // Tinkers Construct
-        api fg.deobf("curse.maven:tconstruct-74072:${project.tconstruct_fileid}")
-        api fg.deobf("curse.maven:mantle-74924:${project.mantle_fileid}")
+//        api fg.deobf("curse.maven:tconstruct-74072:${project.tconstruct_fileid}")  TINKERS IS NOT UPDATED YET
+//        api fg.deobf("curse.maven:mantle-74924:${project.mantle_fileid}")
         // Serene Seasons (Disabled: Incompatible unless compat render mode)
-        // api fg.deobf("curse.maven:sereneseasons-291874:${project.sereneseasons_fileid}")
+         api fg.deobf("curse.maven:sereneseasons-291874:${project.sereneseasons_fileid}")
         // Mekanism
         api fg.deobf("curse.maven:mekanism-268560:${project.mekanism_fileid}")
         // Immersive Engineering
