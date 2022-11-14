@@ -30,7 +30,7 @@ public class MiscNetworking {
     public static final ResourceLocation id_stcDimSync =
         new ResourceLocation("imm_ptl", "dim_sync");
     
-    @Environment(EnvType.CLIENT)
+    @OnlyIn(Dist.CLIENT)
     public static void initClient() {
         ClientPlayNetworking.registerGlobalReceiver(
             MiscNetworking.id_stcRemote,
@@ -78,7 +78,7 @@ public class MiscNetworking {
         return new ClientboundCustomPayloadPacket(id_stcDimSync, buf);
     }
     
-    @Environment(EnvType.CLIENT)
+    @OnlyIn(Dist.CLIENT)
     private static void processDimSync(
         FriendlyByteBuf buf,
         ClientPacketListener packetListener

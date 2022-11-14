@@ -43,7 +43,7 @@ public class MiscHelper {
      * {@link ReentrantThreadExecutor#shouldExecuteAsync()}
      * The execution may get deferred on the render thread
      */
-    @Environment(EnvType.CLIENT)
+    @OnlyIn(Dist.CLIENT)
     public static void executeOnRenderThread(Runnable runnable) {
         Minecraft client = Minecraft.getInstance();
         

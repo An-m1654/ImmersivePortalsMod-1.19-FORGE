@@ -402,7 +402,7 @@ public class Portal extends Entity implements PortalLike, IPEntityEventListenabl
      *                                  Every 3 vertices correspond to a triangle.
      *                                  In camera-centered coordinate.
      */
-    @Environment(EnvType.CLIENT)
+    @OnlyIn(Dist.CLIENT)
     @Override
     public void renderViewAreaMesh(Vec3 portalPosRelativeToCamera, Consumer<Vec3> vertexOutput) {
         if (this instanceof Mirror) {
@@ -1448,7 +1448,7 @@ public class Portal extends Entity implements PortalLike, IPEntityEventListenabl
         unsetRemoved();
     }
     
-    @Environment(EnvType.CLIENT)
+    @OnlyIn(Dist.CLIENT)
     public PortalLike getRenderingDelegate() {
         if (IPGlobal.enablePortalRenderingMerge) {
             PortalGroup group = PortalRenderInfo.getGroupOf(this);

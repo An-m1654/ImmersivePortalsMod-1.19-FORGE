@@ -13,7 +13,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.function.Consumer;
 
-@Environment(EnvType.CLIENT)
+@OnlyIn(Dist.CLIENT)
 public class ClientPortalAnimationManagement {
     private static final Map<Portal, RunningDefaultAnimation> defaultAnimatedPortals = new HashMap<>();
     private static final HashSet<Portal> customAnimatedPortals = new HashSet<>();

@@ -29,7 +29,7 @@ import qouteall.q_misc_util.my_util.SignalArged;
 import java.util.Optional;
 import java.util.UUID;
 
-@Environment(EnvType.CLIENT)
+@OnlyIn(Dist.CLIENT)
 public class IPNetworkingClient {
     
     public static final SignalArged<Portal> clientPortalSpawnSignal = new SignalArged<>();

@@ -375,7 +375,7 @@ public class McHelper {
     }
     
     // because withUnderline is client only
-    @Environment(EnvType.CLIENT)
+    @OnlyIn(Dist.CLIENT)
     public static MutableComponent getLinkText(String link) {
         return Component.literal(link).withStyle(
             style -> style.withClickEvent(new ClickEvent(

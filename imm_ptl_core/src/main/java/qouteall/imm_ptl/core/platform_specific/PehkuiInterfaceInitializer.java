@@ -118,7 +118,7 @@ public class PehkuiInterfaceInitializer {
         PehkuiInterface.invoker = new OnPehkuiPresent();
     }
     
-    @Environment(EnvType.CLIENT)
+    @OnlyIn(Dist.CLIENT)
     private static void onPlayerTeleportedClient(Portal portal) {
         if (portal.hasScaling() && portal.teleportChangesScale) {
             Minecraft client = Minecraft.getInstance();

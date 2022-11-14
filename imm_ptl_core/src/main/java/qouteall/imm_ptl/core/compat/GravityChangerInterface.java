@@ -79,7 +79,7 @@ public class GravityChangerInterface {
     
     private static boolean warned = false;
     
-    @Environment(EnvType.CLIENT)
+    @OnlyIn(Dist.CLIENT)
     private static void warnGravityChangerNotPresent() {
         if (!warned) {
             warned = true;
@@ -129,7 +129,7 @@ public class GravityChangerInterface {
             setClientPlayerGravityDirectionClientOnly(player, direction);
         }
         
-        @Environment(EnvType.CLIENT)
+        @OnlyIn(Dist.CLIENT)
         private void setClientPlayerGravityDirectionClientOnly(
             Player player, Direction direction
         ) {

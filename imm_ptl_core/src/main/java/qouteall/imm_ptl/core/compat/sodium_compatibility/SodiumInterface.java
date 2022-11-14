@@ -13,7 +13,7 @@ import qouteall.imm_ptl.core.render.FrustumCuller;
 
 import javax.annotation.Nullable;
 
-@Environment(EnvType.CLIENT)
+@OnlyIn(Dist.CLIENT)
 public class SodiumInterface {
     
     @Nullable

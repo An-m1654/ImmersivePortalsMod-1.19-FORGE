@@ -8,7 +8,7 @@ import qouteall.q_misc_util.Helper;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
-@Environment(EnvType.CLIENT)
+@OnlyIn(Dist.CLIENT)
 public class IPFlywheelCompat {
     
     public static boolean isFlywheelPresent = false;

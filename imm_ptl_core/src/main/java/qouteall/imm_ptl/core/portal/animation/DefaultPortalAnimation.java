@@ -33,7 +33,7 @@ public class DefaultPortalAnimation {
         return new DefaultPortalAnimation(timingFunction, durationTicks, inverseScale);
     }
     
-    @Environment(EnvType.CLIENT)
+    @OnlyIn(Dist.CLIENT)
     public void startClientDefaultAnimation(Portal portal, PortalState animationStartState) {
         PortalState newState = portal.getPortalState();
         

@@ -59,7 +59,7 @@ public class RequiemCompat {
         return (Mob) possessedEntity;
     }
     
-    @Environment(EnvType.CLIENT)
+    @OnlyIn(Dist.CLIENT)
     public static void onPlayerTeleportedClient() {
         if (!isRequiemPresent) {
             return;

@@ -11,7 +11,7 @@ import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import qouteall.imm_ptl.core.IPGlobal;
 
-@Environment(EnvType.CLIENT)
+@OnlyIn(Dist.CLIENT)
 public class IPConfigGUI {
     public static Screen createClothConfigScreen(Screen parent) {
         IPConfig currConfig = IPConfig.readConfig();

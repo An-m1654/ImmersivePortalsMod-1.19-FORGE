@@ -146,7 +146,7 @@ public class McRemoteProcedureCall {
      * @param arguments The arguments. The types must match the remotely invoked method signature.
      *                  The remote method's first argument must be the player that's sending the packet.
      */
-    @Environment(EnvType.CLIENT)
+    @OnlyIn(Dist.CLIENT)
     public static void tellServerToInvoke(
         String methodPath,
         Object... arguments

@@ -31,7 +31,7 @@ import javax.annotation.Nullable;
  * - The stable time always flows forward, it doesn't flow backward or stop.
  * - The stable time should approach server synced time in a short period of time, even if the server synced time jumps.
  */
-@Environment(EnvType.CLIENT)
+@OnlyIn(Dist.CLIENT)
 public class StableClientTimer {
     // use two numbers to keep precision
     public static final class Time {

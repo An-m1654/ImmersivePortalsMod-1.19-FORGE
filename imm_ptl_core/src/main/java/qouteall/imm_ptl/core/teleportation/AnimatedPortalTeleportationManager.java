@@ -48,7 +48,7 @@ public class AnimatedPortalTeleportationManager {
 //        lastStateTickDelta = 0;
 //    }
 //
-//    @Environment(EnvType.CLIENT)
+//    @OnlyIn(Dist.CLIENT)
 //    private void updateClient() {
 //        Validate.isTrue(portal.level.isClientSide());
 //        lastState = portal.getPortalState();

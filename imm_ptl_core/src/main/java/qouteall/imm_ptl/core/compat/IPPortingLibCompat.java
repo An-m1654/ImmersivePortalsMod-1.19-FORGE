@@ -31,7 +31,7 @@ public class IPPortingLibCompat {
         }
     }
     
-    @Environment(EnvType.CLIENT)
+    @OnlyIn(Dist.CLIENT)
     public static boolean getIsStencilEnabled(RenderTarget renderTarget) {
         if (isPortingLibPresent) {
             return Helper.noError(
@@ -43,7 +43,7 @@ public class IPPortingLibCompat {
         }
     }
     
-    @Environment(EnvType.CLIENT)
+    @OnlyIn(Dist.CLIENT)
     public static void setIsStencilEnabled(RenderTarget renderTarget, boolean cond) {
         if (isPortingLibPresent) {
             

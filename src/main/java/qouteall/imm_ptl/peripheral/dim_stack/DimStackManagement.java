@@ -130,7 +130,7 @@ public class DimStackManagement {
     }
     
     public static class RemoteCallables {
-        @Environment(EnvType.CLIENT)
+        @OnlyIn(Dist.CLIENT)
         public static void clientOpenScreen(List<String> dimensions) {
             List<ResourceKey<Level>> dimensionList =
                 dimensions.stream().map(DimId::idToKey).collect(Collectors.toList());

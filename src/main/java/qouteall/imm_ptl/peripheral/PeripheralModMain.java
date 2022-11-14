@@ -24,7 +24,7 @@ public class PeripheralModMain {
     public static Block portalHelperBlock;
     public static BlockItem portalHelperBlockItem;
     
-    @Environment(EnvType.CLIENT)
+    @OnlyIn(Dist.CLIENT)
     public static void initClient() {
         IPOuterClientMisc.initClient();
     }

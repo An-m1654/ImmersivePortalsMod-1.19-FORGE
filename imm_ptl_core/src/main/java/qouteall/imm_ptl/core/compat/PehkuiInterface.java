@@ -60,7 +60,7 @@ public class PehkuiInterface {
     
     private static boolean messageShown = false;
     
-    @Environment(EnvType.CLIENT)
+    @OnlyIn(Dist.CLIENT)
     private static void showMissingPehkui(Portal portal) {
         if (portal.hasScaling() && portal.teleportChangesScale) {
             if (!messageShown) {
