@@ -8,7 +8,7 @@ It's a Minecraft mod that provides see-through portals and seamless teleportatio
 
 This mod changes a lot of underlying Minecraft mechanics. This mod allows the client to load multiple dimensions at the same time and synchronize remote world information(blocks/entities) to client. It can render portal-in-portals. The portal rendering is roughly compatible with some versions of Sodium and Iris. The portal can transform player scale and gravity direction.  [Implementation Details](https://qouteall.fun/immptl/wiki/Implementation-Details)
 
-(This is the Fabric version of Immersive Portals. [The Forge version](https://github.com/iPortalTeam/ImmersivePortalsModForForge))
+(This is the Forge version of Immersive Portals. [The Fabric version](https://github.com/iPortalTeam/ImmersivePortalsMod))
 
 ## API
 
@@ -23,7 +23,7 @@ This mod also provides some API for:
 [API description](https://qouteall.fun/immptl/wiki/API-for-Other-Mods.html).
 
 ## How to run this code
-https://fabricmc.net/wiki/tutorial:setup
+https://docs.minecraftforge.net/en/1.19.x/gettingstarted/#building-and-testing-your-mod
 
 ## Other
 
